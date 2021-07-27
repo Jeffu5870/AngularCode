@@ -1,8 +1,33 @@
-<h1 mat-dialog-title>Nuevo Cliente</h1>
+<h1 mat-dialog-title>{{ cliente!=null ?'Editar Cliente' : 'Nuevo Cliente' }}</h1>
 
 <div mat-dialog-content></div>
+<mat-form-field>
+    <mat-label>Nit</mat-label>
+    <input type="number" matInput [(ngModel)]="nit">
+</mat-form-field>
+<br>
+<mat-form-field>
+    <mat-label>Nombre</mat-label>
+    <input matInput [(ngModel)]="nombre">
+</mat-form-field>
+<br>
+<mat-form-field>
+    <mat-label>Apellido</mat-label>
+    <input matInput [(ngModel)]="apellido">
+</mat-form-field>
+<br>
+<mat-form-field>
+    <mat-label>Teléfono</mat-label>
+    <input type="number" matInput [(ngModel)]="telefono">
+</mat-form-field>
+<br>
+<mat-form-field>
+    <mat-label>Dirección</mat-label>
+    <input matInput [(ngModel)]="direccion">
+</mat-form-field>
 
 <div mat-dialog-actions>
-    <button mat-raised-button (click)="close()">Cancelar</button>
-    <button mat-raised-button color ="primary" (click) ="addCliente()">Guardar</button>
+    <button mat-raised-button (click)="close()">Abortar</button>
+    <button mat-raised-button color ="primary" 
+    (click) ="cliente !=null ?modificarCliente() : addCliente()">Insertar</button>
 </div>

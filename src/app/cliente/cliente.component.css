@@ -24,3 +24,9 @@ text-align: center;
 border: black 10px solid;
 margin: 2%;
 }
+
+button{
+    margin-top: 20px;
+    margin-left: 100px;
+    border: salmon 2px solid;
+}

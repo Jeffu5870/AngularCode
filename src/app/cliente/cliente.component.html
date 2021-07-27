@@ -29,7 +29,17 @@
             <th mat-header-cell *matHeaderCellDef>direccion</th>
             <td mat-cell *matCellDef ="let element">{{element.direccion}}</td>
         </ng-container>
+        
+        <ng-container matColumnDef ="Modificaciones">
+            <th mat-header-cell *matHeaderCellDef>Modificaciones</th>
+            <td mat-cell *matCellDef ="let element">
+                <button (click)="abrirModificar(element)" class="btn btn-info btn-lg active">Modificar</button>
+                
+            </td>
+        </ng-container>
 
+      
+        
         <tr mat-header-row *matHeaderRowDef = "columnas"></tr>
         <tr mat-row *matRowDef ="let row; columns: columnas"></tr>
     </table>

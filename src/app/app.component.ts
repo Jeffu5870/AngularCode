@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  opened = false;
   title = 'Facturacion';
+
+  toogleSidebar(){
+    this.opened = !this.opened;
+  }
 }

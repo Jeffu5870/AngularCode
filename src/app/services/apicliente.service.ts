@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
+
 import { Observable } from 'rxjs';
 import { Cliente } from '../Models/cliente';
 import { Response } from '../Models/response';
@@ -28,5 +29,17 @@ export class ApiclienteService {
 
   add(cliente:Cliente): Observable<Response>{
     return this._http.post<Response>(this.url, cliente, httpOption);
+
   }
+
+  Modificar(cliente:Cliente): Observable<Response>{
+    return this._http.put<Response>(this.url, cliente, httpOption);
+
+  }
+
+  Eliminar(Nit:number): Observable<Response>{
+    return this._http.delete<Response>(`${this.url}/${Nit}`); //Concatenar la variable que enviaremos
+
+  }
+
 }

@@ -16,6 +16,11 @@ import {MatInputModule} from '@angular/material/input';
 
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { DialogClienteComponent } from './cliente/dialog/dialogcliente.component';
+import { FormsModule } from '@angular/forms';
+import {SidebarModule} from 'ng-sidebar';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 
 @NgModule({
@@ -23,7 +28,8 @@ import { DialogClienteComponent } from './cliente/dialog/dialogcliente.component
     AppComponent,
     HomeComponent,
     ClienteComponent,
-    DialogClienteComponent //Importaciones
+    DialogClienteComponent,
+    SidebarComponent //Importaciones
   ],
   imports: [
     BrowserModule,
@@ -35,8 +41,10 @@ import { DialogClienteComponent } from './cliente/dialog/dialogcliente.component
     MatInputModule,
     MatButtonModule,
     MatSnackBarModule,
-  
-    HttpClientModule
+    FormsModule,
+    SidebarModule,
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
